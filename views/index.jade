@@ -1,5 +1,15 @@
-extends layout
+extendslayout
 
 block content
-  h1= title
-  p Welcome to #{title}
+	h1	German Case Scenario
+	div
+		a(href="/games/new")
+			input(type="button" value="NewGame")
+	div
+		form(action = "/games" method="post")
+			p Name
+			input(type="text" id="playerName" name="playerName")
+			p Game Code
+			input(type="text" id="gameId" name="gameId")
+			br
+			input(type="submit" value="JoinGame")
